@@ -1,0 +1,48 @@
+@import 'variable';
+
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+  grid-row-gap: 20px;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.delay {
+  transition: all 0.5s;
+}
+.active {
+  display: none;
+}
+
+.container {
+  transition: all 1s;
+  // 1500以上
+  @media (min-width: $screen-max) {
+    padding: 0 20rem;
+  }
+// 1200-1500
+  @media (min-width: $screen-lg) and (max-width: $screen-max) {
+    padding: 0 12rem;
+  }
+// 992-1200
+  @media (min-width: $screen-md) and (max-width: $screen-lg) {
+    padding: 0 4rem;
+  }
+  // 768-992
+  @media (min-width: $screen-sm) and (max-width: $screen-md) {
+    padding: 0 7rem;
+  }
+  //屏幕小于768px时
+  @media (max-width: $screen-sm) {
+    padding: 0 1rem;
+  }
+}
+
+button {
+  border: none;
+  outline:none;
+  background: none;
+}

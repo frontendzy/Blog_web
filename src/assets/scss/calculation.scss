@@ -1,0 +1,72 @@
+@import 'variable';
+
+// 文本对齐
+@each $value in (left, center, right) {
+  .text-#{$value} {
+    text-align: $value;
+  }
+}
+
+// 字体颜色
+@each $Key, $value in $colors {
+  .font-#{$Key} {
+    color: $value;
+  }
+}
+
+// 字体大小
+@each $Key, $value in $multiple {
+  .font-#{$Key} {
+    font-size: $value * $base-size;
+  }
+}
+
+// flex 对齐方式
+@each $Key, $value in $justify-content {
+  .justify-#{$Key} {
+    justify-content: $value;
+  }
+}
+@each $Key, $value in $align-items {
+  .align-#{$Key} {
+    align-items: $value;
+  }
+}
+
+// 间距大小
+// @each $Key, $value in $margin-padding {
+//   .ass-#{$Key} {
+//     $value: 0;
+//   }
+// }
+
+@each $mpKey, $mpvalue in $margin-padding {
+  @each $muKey, $muvalue in $multiple {
+    .#{$mpKey}-#{$muKey} {
+      #{$mpvalue}: $muvalue * $base-size;
+    }
+  }
+  @each $muKey, $muvalue in $multiple {
+    .#{$mpKey}-x-#{$muKey} {
+      #{$mpvalue}-left: $muvalue * $base-size;
+      #{$mpvalue}-right: $muvalue * $base-size;
+    }
+  }
+  @each $muKey, $muvalue in $multiple {
+    .#{$mpKey}-y-#{$muKey} {
+      #{$mpvalue}-top: $muvalue * $base-size;
+      #{$mpvalue}-bottom: $muvalue * $base-size;
+    }
+  }
+  @each $diKey, $divalue in $directions {
+    @each $muKey, $muvalue in $multiple {
+      .#{$mpKey}-#{$diKey}-#{$muKey} {
+        #{$mpvalue}-#{$divalue}: $muvalue * $base-size;
+      }
+    }
+  }
+  .#{$mpKey} {
+    #{$mpvalue}: 0;
+  }
+}
+

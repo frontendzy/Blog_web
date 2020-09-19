@@ -1,0 +1,50 @@
+// 屏幕宽度
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-max: 1500px;
+// 大小
+$base-size: 1rem;
+$multiple: (
+  z: 0,
+  s: 0.5,
+  m: 1.0,
+  l: 1.5,
+  xl: 2,
+  t: 3,
+  max: 15
+);
+
+// 颜色
+$colors: (
+  primary: black,
+  secondary: #bdc3c7,
+  item_color: #ecf0f1,
+  link_color: #3498db
+);
+
+//对齐
+$align-items: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch
+);
+$justify-content: (
+start: flex-start,
+end: flex-end,
+center: center,
+between: space-between,
+around: space-around,
+);
+
+$margin-padding: (
+  m: margin,
+  p: padding
+);
+$directions: (
+  t: top, 
+  r: right, 
+  b: bottom, 
+  l: left
+);
